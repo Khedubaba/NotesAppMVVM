@@ -32,4 +32,4 @@ diplay, it also acts according to activity lifecycle ie resume stop and does all
 
 3. Adding Components to your Project: https://developer.android.com/topic/libraries/architecture/adding-components
 
-4. o know equivalent for new Androidx Artifacts from old build artifacts, please refer the below link: https://developer.android.com/jetpack/androidx/migrate/artifact-mappings
+4. To know equivalent for new Androidx Artifacts from old build artifacts, please refer the below link: https://developer.android.com/jetpack/androidx/migrate/artifact-mappings
