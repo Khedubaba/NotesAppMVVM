@@ -26,7 +26,7 @@ diplay, it also acts according to activity lifecycle ie resume stop and does all
 
 ## Links:
 
-1.Android Architecture Guide: https://developer.android.com/jetpack/docs/guide
+1. Android Architecture Guide: https://developer.android.com/jetpack/docs/guide
 
 2. Defining data using Room entities: https://developer.android.com/training/data-storage/room/defining-data
 
