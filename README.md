@@ -1,9 +1,9 @@
 # NotesAppMVVM
 Android Architecture Example. A Notes app made by using MVVM architecture with Room, LiveData, Navigation and ViewModel.
 
-Notes on Android Architectre Components 
+## Notes on Android Architectre Components 
 
-1.Android Architectre Components are different bunch of libraries which help to build more robust and maintainable apps
+1. Android Architectre Components are different bunch of libraries which help to build more robust and maintainable apps
 
 2. When apps get biggere the tightly coupled code becomes problem (All code on single page is bad also called speghatie code)
 
@@ -24,7 +24,8 @@ makes changes to view accordingly. Also LiveData is lifecycle awaire ie LiveData
 diplay, it also acts according to activity lifecycle ie resume stop and does all clean up job when  activity lifcycle end's. So livedata takes care of potential bugs and memory leaks problems.
 
 
-Links:
+## Links:
+
 1.Android Architecture Guide: https://developer.android.com/jetpack/docs/guide
 
 2. Defining data using Room entities: https://developer.android.com/training/data-storage/room/defining-data
