@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChanged(List<Note> notes) {
                 //Update RecyclerView
-                adapter.setNotes(notes);
+                adapter.submitList(notes);
             }
         });
 
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                                     @Override
                                     public void onChanged(List<Note> notes) {
                                         //Update RecyclerView
-                                        adapter.setNotes(notes);
+                                        adapter.submitList(notes);
                                     }
                                 });
                                 Toast.makeText(MainActivity.this, "Note deletion canceled", Toast.LENGTH_SHORT).show();
@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
                                     @Override
                                     public void onChanged(List<Note> notes) {
                                         //Update RecyclerView
-                                        adapter.setNotes(notes);
+                                        adapter.submitList(notes);
                                     }
                                 });
                                 Toast.makeText(MainActivity.this, "Note deletion canceled", Toast.LENGTH_SHORT).show();
