@@ -82,12 +82,22 @@ public class MainActivity extends AppCompatActivity {
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+
+                                RecyclerView recyclerView = findViewById(R.id.recycler_view);
+                                recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+                                //setHasFixedSize to true if you know that youu recyclerview layout(note_item) size and structure wont change this makes it more efficient
+                                recyclerView.setHasFixedSize(true);
+
+                                recyclerView.setAdapter(adapter);
+
                                 mNoteViewModel = ViewModelProviders.of(MainActivity.this).get(NoteViewModel.class);
                                 mNoteViewModel.getAllNotes().observe(MainActivity.this, new Observer<List<Note>>() {
                                     @Override
                                     public void onChanged(List<Note> notes) {
                                         //Update RecyclerView
                                         adapter.submitList(notes);
+//                                        Toast.makeText(MainActivity.this, "hoooo", Toast.LENGTH_SHORT).show();
+
                                     }
                                 });
                                 Toast.makeText(MainActivity.this, "Note deletion canceled", Toast.LENGTH_SHORT).show();
