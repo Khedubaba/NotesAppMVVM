@@ -46,4 +46,7 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
 
+    //Ads
+    implementation 'com.google.android.gms:play-services-ads:19.1.0'
+
 }
