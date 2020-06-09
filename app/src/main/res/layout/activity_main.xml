@@ -31,8 +31,9 @@
         android:layout_gravity="bottom"
         android:layout_below="@id/recycler_view"
         app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-3940256099942544/6300978111"></com.google.android.gms.ads.AdView>
+        app:adUnitId="ca-app-pub-5838937600190260/4385046223"></com.google.android.gms.ads.AdView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 <!--    ca-app-pub-5838937600190260/4385046223-->
+<!--    ca-app-pub-3940256099942544/6300978111-->
