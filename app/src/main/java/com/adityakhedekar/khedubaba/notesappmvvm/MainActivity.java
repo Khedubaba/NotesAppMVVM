@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
                                     }
                                 });
-                                Toast.makeText(MainActivity.this, "Note deletion canceled", Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(MainActivity.this, "Note deletion canceled", Toast.LENGTH_SHORT).show();
                             }
                         })
                         .show();

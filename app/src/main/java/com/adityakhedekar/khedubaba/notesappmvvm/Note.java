@@ -4,6 +4,7 @@ package com.adityakhedekar.khedubaba.notesappmvvm;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "note_table")
@@ -16,6 +17,7 @@ public class Note {
     private String description;
 
 //    @ColumnInfo(name = "priority_column")
+//    @Ignore : use Ignore annotation if you don't want this fields to be added to tables
     private int priority;
 
     public Note(String title, String description, int priority) {

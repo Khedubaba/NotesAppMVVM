@@ -1,7 +1,7 @@
 package com.adityakhedekar.khedubaba.notesappmvvm;
 
-//DAO's need to be interfaces or abstract classes as we don't provide method body we just create methods and antate it and Room will
-// generate all the necesaary code for it. General rule is create 1 DAO per entity
+//DAO's need to be interfaces or abstract classes as we don't provide method body we just create methods and anotate it and Room will
+// generate all the necessary code for it. General rule is create 1 DAO per entity
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;

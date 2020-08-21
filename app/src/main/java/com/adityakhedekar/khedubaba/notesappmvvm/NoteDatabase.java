@@ -13,11 +13,15 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 public abstract class NoteDatabase extends RoomDatabase {
 
     //we create this variable because we have to turn this class into singleton
+    //Singleton means we can't create multiple instances of this database instead we use this same instance everywhere, which you can access over static variable
     private static NoteDatabase instance;
 
     public abstract NoteDAO noteDAO();
 
+    //singelton
+    //synchronized only one thread at time can access this method, so you don't accidentally two instances of db when two diff threads tries to acces this instance at a same time
     public static synchronized NoteDatabase getInstance(Context context){
+        //we only want to instantiate this database only when there is no instance is available
         if (instance == null){
             instance = Room.databaseBuilder(context.getApplicationContext(),
                     NoteDatabase.class, "note_database")
