@@ -41,6 +41,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //setHasFixedSize to true if you know that youu recyclerview layout(note_item) size and structure wont change this makes it more efficient
+        recyclerView.setHasFixedSize(true);
+
+        recyclerView.setAdapter(adapter);
+
+        mNoteViewModel = ViewModelProviders.of(this).get(NoteViewModel.class);
+        mNoteViewModel.getAllNotes().observe(this, new Observer<List<Note>>() {
+            @Override
+            public void onChanged(List<Note> notes) {
+                //Update RecyclerView
+                adapter.submitList(notes);
+            }
+        });
         //AdMob
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
@@ -60,21 +76,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        //setHasFixedSize to true if you know that youu recyclerview layout(note_item) size and structure wont change this makes it more efficient
-        recyclerView.setHasFixedSize(true);
-
-        recyclerView.setAdapter(adapter);
-
-        mNoteViewModel = ViewModelProviders.of(this).get(NoteViewModel.class);
-        mNoteViewModel.getAllNotes().observe(this, new Observer<List<Note>>() {
-            @Override
-            public void onChanged(List<Note> notes) {
-                //Update RecyclerView
-                adapter.submitList(notes);
-            }
-        });
 
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             @Override
